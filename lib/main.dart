@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:green/view/chat_with_us.dart';
 import 'package:green/view/details_screen.dart';
 import 'package:green/view/home_screen.dart';
+import 'package:green/view/map_offers.dart';
 import 'package:green/view/product_details.dart';
 
 void main() {
@@ -37,7 +38,7 @@ class MyApp extends StatelessWidget {
        // primarySwatch:MaterialColor(0x8BBF4D,  { 500: Color(0x8BBF4D),})  ,
       ),
       
-      home: DetailScreen(),
+      home: MapScreen(),
     ));
   }
 }
