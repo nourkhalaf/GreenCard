@@ -44,9 +44,9 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                             });
                           },
                           children: [
-                            Image.asset('lib/assets/soul.png'),
-                            Image.asset('lib/assets/soul.png'),
-                            Image.asset('lib/assets/soul.png'),
+                            Image.asset('lib/assets/soul.png',fit: BoxFit.cover,),
+                            Image.asset('lib/assets/soul.png',fit: BoxFit.cover,),
+                            Image.asset('lib/assets/soul.png',fit: BoxFit.cover,),
                           ]),
                     ),
                   ),
@@ -66,7 +66,8 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                   ),
                   Container(
                     height: 30,
-                    width: 391,
+                    width: double.infinity,
+                    margin: EdgeInsets.symmetric(horizontal: 20),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.only(
                           topRight: Radius.circular(15),
@@ -110,7 +111,9 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
               ),
               Container(
                 height: 272,
-                width: 391,
+               width: double.infinity,
+                    margin: EdgeInsets.symmetric(horizontal: 20),
+                   
                 decoration: const BoxDecoration(
                   borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(15),
@@ -159,7 +162,10 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                     ),
                   ),
                   Divider(color: Colors.white, thickness: 2),
-                  Image.asset('lib/assets/map.png'),
+                  Container(
+                     margin: EdgeInsets.symmetric(horizontal: 20),
+                   
+                    child: Image.asset('lib/assets/map.png')),
                   SizedBox(
                     height: 17,
                   ),
@@ -168,9 +174,9 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        SizedBox(
-                          width: 119,
-                          height: 24,
+                        Expanded(
+                          // width: 119,
+                          // height: 24,
                           child: ElevatedButton(
                             onPressed: () {},
                             style: ElevatedButton.styleFrom(
@@ -186,9 +192,10 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                             ),
                           ),
                         ),
-                        SizedBox(
-                          width: 119,
-                          height: 24,
+                        SizedBox(width: 5,),
+                        Expanded(
+                          // width: 119,
+                          // height: 24,
                           child: ElevatedButton(
                             onPressed: () {},
                             style: ElevatedButton.styleFrom(
@@ -203,10 +210,11 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                                   fontFamily: 'Gotham'),
                             ),
                           ),
-                        ),
-                        SizedBox(
-                          width: 119,
-                          height: 24,
+                        ),                        SizedBox(width: 5,),
+
+                        Expanded(
+                          // width: 119,
+                          // height: 24,
                           child: ElevatedButton(
                             onPressed: () {},
                             style: ElevatedButton.styleFrom(
@@ -323,7 +331,7 @@ class customWidget extends StatelessWidget {
           Spacer(),
           Container(
             color: Color(0xFFC6C2C2),
-            height: 62,
+            height: 54,
             width: 157,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,

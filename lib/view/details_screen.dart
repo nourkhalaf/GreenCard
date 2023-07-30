@@ -4,6 +4,7 @@ import 'package:flutter_svg/svg.dart';
 import '../widgets/search_widget.dart';
 
 class DetailScreen extends StatelessWidget {
+  var items=['ASIAN','BREAKFAST','LEBANESE', 'AMERICAN','italian'];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,84 +38,84 @@ class DetailScreen extends StatelessWidget {
             ),
             Container(
               width: double.infinity,
+              height: 40,
               color: Color(0xFFF5F4F4),
-              padding: EdgeInsets.all(12),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                    padding: EdgeInsets.all(5),
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(14),
-                        color: Color(0xFF8BBF4D)),
-                    child: Text(
-                      'ASIAN',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontFamily: 'Junegull',
-                        fontSize: 16,
+              padding: EdgeInsets.all(8),
+              child: ListView.separated(
+                scrollDirection: Axis.horizontal,
+                  itemBuilder: (context, index) => CustomWidget2(items[index]),
+                  separatorBuilder: (context, index) => SizedBox(
+                        width: 5,
                       ),
-                    ),
-                  ),
-                  Container(
-                    padding: EdgeInsets.all(5),
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(14),
-                        color: Color(0xFF8BBF4D)),
-                    child: Text(
-                      'BREAKFAST',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontFamily: 'Junegull',
-                        fontSize: 16,
-                      ),
-                    ),
-                  ),
-                  Container(
-                    padding: EdgeInsets.all(5),
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(14),
-                        color: Color(0xFF8BBF4D)),
-                    child: Text(
-                      'LEBANESE',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontFamily: 'Junegull',
-                        fontSize: 16,
-                      ),
-                    ),
-                  ),
-                  Container(
-                    padding: EdgeInsets.all(5),
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(14),
-                        color: Color(0xFF8BBF4D)),
-                    child: Text(
-                      'AMERICAN',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontFamily: 'Junegull',
-                        fontSize: 16,
-                      ),
-                    ),
-                  ),
-                  Container(
-                    padding: EdgeInsets.all(5),
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(14),
-                        color: Color(0xFF8BBF4D)),
-                    child: Text(
-                      'italian',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontFamily: 'Junegull',
-                        fontSize: 16,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+                  itemCount: items.length),
             ),
+            // Container(
+            //   width: double.infinity,
+            //   color: Color(0xFFF5F4F4),
+            //   padding: EdgeInsets.all(12),
+            //   child: Row(
+            //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            //     children: [
+            //       CustomWidget(),
+            //       Container(
+            //         padding: EdgeInsets.all(5),
+            //         decoration: BoxDecoration(
+            //             borderRadius: BorderRadius.circular(14),
+            //             color: Color(0xFF8BBF4D)),
+            //         child: Text(
+            //           'BREAKFAST',
+            //           style: TextStyle(
+            //             color: Colors.white,
+            //             fontFamily: 'Junegull',
+            //             fontSize: 16,
+            //           ),
+            //         ),
+            //       ),
+            //       Container(
+            //         padding: EdgeInsets.all(5),
+            //         decoration: BoxDecoration(
+            //             borderRadius: BorderRadius.circular(14),
+            //             color: Color(0xFF8BBF4D)),
+            //         child: Text(
+            //           'LEBANESE',
+            //           style: TextStyle(
+            //             color: Colors.white,
+            //             fontFamily: 'Junegull',
+            //             fontSize: 16,
+            //           ),
+            //         ),
+            //       ),
+            //       Container(
+            //         padding: EdgeInsets.all(5),
+            //         decoration: BoxDecoration(
+            //             borderRadius: BorderRadius.circular(14),
+            //             color: Color(0xFF8BBF4D)),
+            //         child: Text(
+            //           'AMERICAN',
+            //           style: TextStyle(
+            //             color: Colors.white,
+            //             fontFamily: 'Junegull',
+            //             fontSize: 16,
+            //           ),
+            //         ),
+            //       ),
+            //       Container(
+            //         padding: EdgeInsets.all(5),
+            //         decoration: BoxDecoration(
+            //             borderRadius: BorderRadius.circular(14),
+            //             color: Color(0xFF8BBF4D)),
+            //         child: Text(
+            //           'italian',
+            //           style: TextStyle(
+            //             color: Colors.white,
+            //             fontFamily: 'Junegull',
+            //             fontSize: 16,
+            //           ),
+            //         ),
+            //       ),
+            //     ],
+            //   ),
+            // ),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 20),
               child: ListView.separated(
@@ -126,6 +127,34 @@ class DetailScreen extends StatelessWidget {
               ),
             ),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class CustomWidget2 extends StatelessWidget {
+  final String title;
+  const CustomWidget2(
+    this.title, {
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 24,
+      padding: EdgeInsets.symmetric(horizontal: 8),
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(14), color: Color(0xFF8BBF4D)),
+      child: Center(
+        child: Text(
+          title,
+          style: TextStyle(
+            color: Colors.white,
+            fontFamily: 'Junegull',
+            fontSize: 16,
+          ),
         ),
       ),
     );
@@ -202,7 +231,6 @@ class CustomWidget extends StatelessWidget {
                       '15% Discount',
                       style: TextStyle(
                           fontSize: 9,
-                         
                           fontWeight: FontWeight.bold,
                           color: Colors.white,
                           fontFamily: 'Gotham'),
@@ -216,7 +244,6 @@ class CustomWidget extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               SvgPicture.asset('lib/assets/star.svg'),
-           
               Spacer(),
               Container(
                 clipBehavior: Clip.antiAliasWithSaveLayer,

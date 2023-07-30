@@ -89,7 +89,7 @@ class HomeScreen extends StatelessWidget {
                             blurRadius: 6,
                             offset: Offset(0, 0))
                       ]),
-                  height: 140,
+                  height: 144,
                   padding: const EdgeInsets.only(top: 10, bottom: 8, left: 20),
                   child: Column(
                     children: [
@@ -204,7 +204,7 @@ class CustomWidget2 extends StatelessWidget {
               title,
               style: const TextStyle(
                   fontSize: 11,
-                  //overflow: TextOverflow.ellipsis,
+                overflow: TextOverflow.ellipsis,
                   fontWeight: FontWeight.bold,
                   fontFamily: 'Gotham'),
             ),

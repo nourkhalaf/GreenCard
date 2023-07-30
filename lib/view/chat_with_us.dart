@@ -11,6 +11,10 @@ class ChatScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+      ),
       body: Column(children: [
         SearchWidget(),
         Container(
@@ -96,7 +100,7 @@ class ChatScreen extends StatelessWidget {
                   SizedBox(
                     width: 14,
                   ),
-                  customButton('POINTS ISSUE'),
+                  customButton('POINTS ISSUE'),  
                 ],
               ),
               SizedBox(
@@ -104,7 +108,7 @@ class ChatScreen extends StatelessWidget {
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 162.0),
-                child: customButton('RESERVATION ISSUE', width: 157),
+                child: customButton('RESERVATION ISSUE', width: 170),
               ),
             ],
           ),
