@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: Size(360, 640), // Design size of your UI in dp (width, height)
+      designSize: Size(430, 932), // Design size of your UI in dp (width, height)
       builder: (context,_) =>  
     
     MaterialApp(

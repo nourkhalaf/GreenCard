@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../widgets/search_widget.dart';
@@ -20,37 +21,39 @@ class RateScreen extends StatelessWidget {
               height: 0,
               color: Theme.of(context).primaryColor,
               thickness: 2,
-            ),       SizedBox(height: 120,),
+            ),       SizedBox(height: 120.h,),
           Text(
             'Hope your issue is resolved!',
             style: TextStyle(
               color: Theme.of(context).primaryColor,
               fontFamily: 'Gotham',
               fontWeight: FontWeight.bold,
-              fontSize: 27,
+              fontSize: 22.sp,
             ),
           ),
+          SizedBox(height: 10.h,),
           Text(
             'Please tell us how happy you are with our\nservice?',
             style: TextStyle(
               color: Colors.black,
               fontFamily: 'Gotham',
               fontWeight: FontWeight.bold,
-              fontSize: 15,
+              fontSize: 15.sp,
             ),
+            textAlign: TextAlign.center,
           ),
-          SizedBox(height: 100),
+          SizedBox(height: 100.h),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SvgPicture.asset('lib/assets/sad.svg'),
-              SizedBox(width: 20),
+              SizedBox(width: 20.w),
               SvgPicture.asset('lib/assets/smile2.svg'),
-              SizedBox(width: 20),
+              SizedBox(width: 20.w),
               SvgPicture.asset('lib/assets/smile.svg'),
             ],
           ),
-          SizedBox(height: 140),
+          SizedBox(height: 140.h),
           ElevatedButton(
             onPressed: () {},
             child: Text(
@@ -59,16 +62,17 @@ class RateScreen extends StatelessWidget {
                 color: Colors.white,
                 fontFamily: 'Gotham',
                 fontWeight: FontWeight.bold,
-                fontSize: 13,
+                fontSize: 11.sp,
               ),
             ),
             style: ElevatedButton.styleFrom(
-                shape: CircleBorder(eccentricity: 1),
-                fixedSize: Size(90, 90),
+                shape: CircleBorder(),
+                padding: EdgeInsets.symmetric(horizontal: 13.w),
+                fixedSize: Size(90.h, 90.w),
                 backgroundColor: Theme.of(context).primaryColor,
                 side:
-                    BorderSide(strokeAlign: -6, color: Colors.white, width: 1)),
-          ),SizedBox(height: 100,),
+                    BorderSide(strokeAlign: -6, color: Colors.white, width: 1.w)),
+          ),SizedBox(height: 100.h,),
               Divider(
               
               height: 0,
@@ -82,7 +86,7 @@ class RateScreen extends StatelessWidget {
             fontFamily: 'Gotham',
             fontWeight: FontWeight.bold,
             color: Theme.of(context).primaryColor,
-            fontSize: 15,
+            fontSize: 15.sp,
              ),
               ),
             ),
