@@ -6,6 +6,7 @@ import 'package:green/view/home_screen.dart';
 import 'package:green/view/map_offers.dart';
 import 'package:green/view/offer.dart';
 import 'package:green/view/product_details.dart';
+import 'package:green/view/rate.dart';
 
 void main() {
   runApp(const MyApp());
@@ -39,7 +40,7 @@ class MyApp extends StatelessWidget {
        // primarySwatch:MaterialColor(0x8BBF4D,  { 500: Color(0x8BBF4D),})  ,
       ),
       
-      home: OfferScreen(),
+      home: RateScreen(),
     ));
   }
 }

@@ -83,6 +83,9 @@ flutter:
     - lib/assets/back.svg
     - lib/assets/map.png
     - lib/assets/green.svg
+    - lib/assets/smile.svg
+    - lib/assets/smile2.svg
+    - lib/assets/sad.svg
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 

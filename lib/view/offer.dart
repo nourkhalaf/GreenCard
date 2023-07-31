@@ -164,28 +164,23 @@ class OfferScreen extends StatelessWidget {
             ),
           //  Spacer(),
           SizedBox(height: 12,),
-            Column(
-             children: [
-               Divider(
-                 
-                 height: 0,
-                 color: Theme.of(context).primaryColor,
-                 thickness: 2,
-               ),    Padding(
+            Divider(
+              
+              height: 0,
+              color: Theme.of(context).primaryColor,
+              thickness: 2,
+            ),    Padding(
               padding: const EdgeInsets.all(14.0),
               child: Text(
              'support@greencard-sa.com | 800 238 84 77',
              style: TextStyle(
-               fontFamily: 'Gotham',
-               fontWeight: FontWeight.bold,
-               color: Theme.of(context).primaryColor,
-               fontSize: 15,
+            fontFamily: 'Gotham',
+            fontWeight: FontWeight.bold,
+            color: Theme.of(context).primaryColor,
+            fontSize: 15,
              ),
               ),
             ),
-              
-             ],
-              ),
            ]),
         ));
   }
