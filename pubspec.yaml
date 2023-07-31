@@ -82,6 +82,7 @@ flutter:
     - lib/assets/upload.svg
     - lib/assets/back.svg
     - lib/assets/map.png
+    - lib/assets/green.svg
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 

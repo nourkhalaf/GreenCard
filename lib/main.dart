@@ -4,6 +4,7 @@ import 'package:green/view/chat_with_us.dart';
 import 'package:green/view/details_screen.dart';
 import 'package:green/view/home_screen.dart';
 import 'package:green/view/map_offers.dart';
+import 'package:green/view/offer.dart';
 import 'package:green/view/product_details.dart';
 
 void main() {
@@ -34,11 +35,11 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primaryColor: Color(0xFF8BBF4D),
+        primaryColor: Color(0xFF8BBF4D,),
        // primarySwatch:MaterialColor(0x8BBF4D,  { 500: Color(0x8BBF4D),})  ,
       ),
       
-      home: MapScreen(),
+      home: OfferScreen(),
     ));
   }
 }
