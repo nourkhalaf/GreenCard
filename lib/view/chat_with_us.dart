@@ -91,11 +91,16 @@ class SubjectsWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.start,
       children: [
-        Padding(
-          padding:   EdgeInsetsDirectional.only(start: 130.w, top: 60.h),
-          child: customButton('DISCOUNT ISSUE'),
-        ),
+         SizedBox(height: 60.h,),
+          Row(
+            children: [
+              SizedBox(width: 130.w,),
+              customButton('DISCOUNT ISSUE'),
+            ],
+          ),
+      
         SizedBox(
           height: 14.h,
         ),
@@ -144,10 +149,13 @@ class SubjectsWidget extends StatelessWidget {
         SizedBox(
           height: 14.h,
         ),
-        Padding(
-          padding:   EdgeInsets.only(left: 162.w),
-          child: customButton('RESERVATION ISSUE', width: 157.w),
-        ),
+       
+          Row(
+            children: [
+              SizedBox(width: 162.w,),
+         customButton('RESERVATION ISSUE', width: 157.w),
+            ],
+          ),
       ],
     );
   }
