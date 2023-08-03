@@ -70,11 +70,12 @@ class RateScreen extends StatelessWidget {
             ),
             style: ElevatedButton.styleFrom(
                 shape: CircleBorder(),
-                padding: EdgeInsets.symmetric(horizontal: 13.w),
-                fixedSize: Size(90.h, 90.w),
+                padding: EdgeInsets.symmetric(horizontal: 12),
+                minimumSize: Size(90.w, 90.w),
+ 
                 backgroundColor: Theme.of(context).primaryColor,
                 side:
-                    BorderSide(strokeAlign: -6, color: Colors.white, width: 1.w)),
+                    BorderSide(strokeAlign: -5, color: Colors.white, width: 1.w)),
           ),SizedBox(height: 100.h,),
               Divider(
               
