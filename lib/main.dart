@@ -46,7 +46,7 @@ class MyApp extends StatelessWidget {
 
                 // primarySwatch:MaterialColor(0x8BBF4D,  { 500: Color(0x8BBF4D),})  ,
               ),
-              home: RateScreen(),
+              home: OfferScreen(),
               getPages: [
                 GetPage(name: '/homeScreen', page: () => HomeScreen()),
                 GetPage(name: '/detailsScreen', page: () => DetailScreen()),
