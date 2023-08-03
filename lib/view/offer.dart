@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../widgets/bottom_nav_bar.dart';
 import '../widgets/search_widget.dart';
 
 class OfferScreen extends StatelessWidget {
@@ -13,6 +15,8 @@ class OfferScreen extends StatelessWidget {
           backgroundColor: Colors.transparent,
           elevation: 0,
         ),
+                bottomNavigationBar: BottomNavBarWidget(),
+
         body: SingleChildScrollView(
           child: Column(children: [
             SearchWidget(),
@@ -28,7 +32,7 @@ class OfferScreen extends StatelessWidget {
                 style: TextStyle(
                   fontFamily: 'Junegull',
                   color: Colors.white,
-                  fontSize: 17,
+                  fontSize: 17.sp,
                 ),
               ),
             ),
@@ -44,50 +48,50 @@ class OfferScreen extends StatelessWidget {
                 style: TextStyle(
                   fontFamily: 'Junegull',
                   color: Colors.white,
-                  fontSize: 17,
+                  fontSize: 17.sp,
                 ),
               ),
             ),
             SizedBox(
-              height: 40,
+              height: 40.h,
             ),
             SvgPicture.asset('lib/assets/green.svg'),
             SizedBox(
-              height: 12,
+              height: 12.h,
             ),
             Text(
               'ENJOY YOUR\nGREEN PRICE!',
               style: TextStyle(
-                  fontSize: 27,
+                  fontSize: 27.sp,
                   color: Theme.of(context).primaryColor,
                   fontFamily: 'Gotham',
                   fontWeight: FontWeight.bold),
             ),
             SizedBox(
-              height: 27,
+              height: 27.h,
             ),
             Text(
               '1',
               style: TextStyle(
-                  fontSize: 25,
+                  fontSize: 25.sp,
                   color: Color(0xFF165735),
                   fontFamily: 'Gotham',
                   fontWeight: FontWeight.bold),
             ),
             SizedBox(
-              height: 8,
+              height: 8.h,
             ),
             Text(
               'Please give this CODE to the cashier or the\n waiter to get your DISCOUNT :)',
               style: TextStyle(
-                fontSize: 12,
+                fontSize: 12.sp,
                 color: Color(0xFF165735),
                 fontFamily: 'Gotham',
                 fontWeight: FontWeight.bold,
               ),
             ),
             SizedBox(
-              height: 12,
+              height: 12.h,
             ),
             Container(
               padding: EdgeInsets.symmetric(vertical: 8, horizontal: 75),
@@ -100,23 +104,23 @@ class OfferScreen extends StatelessWidget {
                   color: Colors.white,
                   fontFamily: 'Gotham',
                   fontWeight: FontWeight.bold,
-                  fontSize: 33,
+                  fontSize: 33.sp,
                 ),
               ),
             ),
             SizedBox(
-              height: 20,
+              height: 20.h,
             ),
             Text(
               '2',
               style: TextStyle(
-                  fontSize: 25,
+                  fontSize: 25.sp,
                   color:Color(0xFF165735),
                   fontFamily: 'Gotham',
                   fontWeight: FontWeight.bold),
             ),
             SizedBox(
-              height: 8,
+              height: 8.h,
             ),
             Container(
               padding: EdgeInsets.symmetric(vertical: 8, horizontal: 16),
@@ -131,11 +135,11 @@ class OfferScreen extends StatelessWidget {
                       color: Theme.of(context).primaryColor,
                       fontFamily: 'Gotham',
                       fontWeight: FontWeight.bold,
-                      fontSize: 15,
+                      fontSize: 15.sp,
                     ),
                   ),
                   SizedBox(
-                    height: 4,
+                    height: 4.h,
                   ),
                   Text(
                     'GreenPoints',
@@ -143,19 +147,19 @@ class OfferScreen extends StatelessWidget {
                       color: Theme.of(context).primaryColor,
                       fontFamily: 'Gotham',
                       fontWeight: FontWeight.bold,
-                      fontSize: 27,
+                      fontSize: 27.sp,
                     ),
                   ),
                 ],
               ),
             ),
             SizedBox(
-              height: 33,
+              height: 33.h,
             ),
             Text(
               'If you face any issue with getting your special price, please\n contact us through the following channels:',
               style: TextStyle(
-                fontSize: 12,
+                fontSize: 12.sp,
                 color: Colors.black,
                 fontFamily: 'Gotham',
                 fontWeight: FontWeight.bold,
@@ -163,10 +167,10 @@ class OfferScreen extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
           //  Spacer(),
-          SizedBox(height: 12,),
+          SizedBox(height: 12.h,),
             Divider(
               
-              height: 0,
+              height: 0.h,
               color: Theme.of(context).primaryColor,
               thickness: 2,
             ),    Padding(
@@ -177,7 +181,7 @@ class OfferScreen extends StatelessWidget {
             fontFamily: 'Gotham',
             fontWeight: FontWeight.bold,
             color: Theme.of(context).primaryColor,
-            fontSize: 15,
+            fontSize: 15.sp,
              ),
               ),
             ),

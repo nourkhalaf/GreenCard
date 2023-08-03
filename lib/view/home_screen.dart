@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:green/widgets/bottom_nav_bar.dart';
 
 import '../widgets/search_widget.dart';
 
@@ -28,6 +30,7 @@ class HomeScreen extends StatelessWidget {
           backgroundColor: Colors.transparent,
           elevation: 0,
         ),
+        bottomNavigationBar: BottomNavBarWidget(),
         body: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.only(bottom: 16),
@@ -39,11 +42,11 @@ class HomeScreen extends StatelessWidget {
                   width: double.infinity,
                   fit: BoxFit.cover,
                 ),
-                const SizedBox(
-                  height: 18,
+                  SizedBox(
+                  height: 18.h,
                 ),
                 Container(
-                  height: 90,
+                  height: 90.h,
                   padding: const EdgeInsets.symmetric(horizontal: 20),
                   child: ListView.separated(
                     scrollDirection: Axis.horizontal,
@@ -51,13 +54,13 @@ class HomeScreen extends StatelessWidget {
                     itemBuilder: (_, index) => CustomWidget(
                         categories[index]['image']!,
                         categories[index]['title']!),
-                    separatorBuilder: (context, index) => const SizedBox(
-                      width: 20,
+                    separatorBuilder: (context, index) =>   SizedBox(
+                      width: 20.w,
                     ),
                   ),
                 ),
-               const SizedBox(
-                  height: 8,
+                 SizedBox(
+                  height: 8.w,
                 ),
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -67,17 +70,17 @@ class HomeScreen extends StatelessWidget {
                     style: ElevatedButton.styleFrom(
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(14))),
-                    child: const Text(
+                    child:   Text(
                       'Nearest Offers',
                       style: TextStyle(
-                          fontSize: 17,
+                          fontSize: 17.sp,
                           //  fontWeight: FontWeight.bold,
                           fontFamily: 'Junegull'),
                     ),
                   ),
                 ),
-               const SizedBox(
-                  height: 16,
+                 SizedBox(
+                  height: 16.h,
                 ),
                 Container(
                   decoration: BoxDecoration(
@@ -89,19 +92,19 @@ class HomeScreen extends StatelessWidget {
                             blurRadius: 6,
                             offset: Offset(0, 0))
                       ]),
-                  height: 144,
+                  height: 144.h,
                   padding: const EdgeInsets.only(top: 10, bottom: 8, left: 20),
                   child: Column(
                     children: [
-                     const Text(
+                       Text(
                         'Enjoy 1+1 offers',
                         style: TextStyle(
                             color: Color(0xFF115735),
-                            fontSize: 20,
+                            fontSize: 20.sp,
                             fontFamily: 'Junegull'),
                       ),
-                   const   SizedBox(
-                        height: 8,
+                       SizedBox(
+                        height: 8.h,
                       ),
                       Expanded(
                         child: ListView.separated(
@@ -109,8 +112,8 @@ class HomeScreen extends StatelessWidget {
                           itemCount: offers.length,
                           itemBuilder: (_, index) => CustomWidget2(
                               offers[index]['image']!, offers[index]['title']!),
-                          separatorBuilder: (context, index) =>const SizedBox(
-                            width: 8,
+                          separatorBuilder: (context, index) =>  SizedBox(
+                            width: 8.w,
                           ),
                         ),
                       ),

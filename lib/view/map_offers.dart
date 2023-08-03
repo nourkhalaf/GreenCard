@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 //import 'package:google_maps_flutter/google_maps_flutter.dart';
 
+import '../widgets/bottom_nav_bar.dart';
 import '../widgets/search_widget.dart';
 
 class MapScreen extends StatefulWidget {
@@ -24,6 +26,8 @@ class _MapScreenState extends State<MapScreen> {
           backgroundColor: Colors.transparent,
           elevation: 0,
         ),
+                bottomNavigationBar: BottomNavBarWidget(),
+
         body: Column(children: [
           SearchWidget(),
            Container(
@@ -38,7 +42,7 @@ class _MapScreenState extends State<MapScreen> {
             style: TextStyle(
               fontFamily: 'Junegull',
               color: Colors.white,
-              fontSize: 17,
+              fontSize: 17.sp,
             ),
           ),
         ),

@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../widgets/bottom_nav_bar.dart';
 import '../widgets/search_widget.dart';
 
 class ChatScreen extends StatelessWidget {
@@ -15,122 +17,138 @@ class ChatScreen extends StatelessWidget {
         backgroundColor: Colors.transparent,
         elevation: 0,
       ),
-      body: Column(children: [
-        SearchWidget(),
-        Container(
-          width: double.infinity,
-          padding: EdgeInsets.all(4),
-          decoration: BoxDecoration(
-            color: Color(0xFF165735),
-          ),
-          child: Text(
-            'CHAT WITH US',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              fontFamily: 'Junegull',
-              color: Colors.white,
-              fontSize: 17,
+      bottomNavigationBar: Column(mainAxisSize: MainAxisSize.min,
+        children: [
+                 Divider(
+                   height: 0.h,
+                   color: Theme.of(context).primaryColor,
+                   thickness: 2,
+                 ),
+                 Padding(
+                   padding: const EdgeInsets.all(14.0),
+                   child: Text(
+                     'support@greencard-sa.com | 800 238 84 77',
+                     style: TextStyle(
+                       fontFamily: 'Gotham',
+                       fontWeight: FontWeight.bold,
+                       color: Theme.of(context).primaryColor,
+                       fontSize: 15.sp,
+                     ),
+                   ),
+                 ),
+   
+          BottomNavBarWidget(),
+        ],
+      ),
+      body: ListView(
+        children: [
+          SearchWidget(),
+          Container(
+            width: double.infinity,
+            padding: EdgeInsets.all(4),
+            decoration: BoxDecoration(
+              color: Color(0xFF165735),
+            ),
+            child: Text(
+              'CHAT WITH US',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontFamily: 'Junegull',
+                color: Colors.white,
+                fontSize: 17,
+              ),
             ),
           ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(24, 16, 24, 10),
+            child: Text(
+              'Please choose one of the subjects below that is related to the issue…',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontFamily: 'Gotham',
+                fontWeight: FontWeight.bold,
+                color: Colors.black,
+                fontSize: 15.sp,
+              ),
+            ),
+          ),
+          Divider(
+            color: Theme.of(context).primaryColor,
+            thickness: 2,
+          ),
+          SubjectsWidget(),
+        ],
+      ),
+    );
+  }
+}
+
+class SubjectsWidget extends StatelessWidget {
+  const SubjectsWidget({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Padding(
+          padding:   EdgeInsetsDirectional.only(start: 130.w, top: 60.h),
+          child: customButton('DISCOUNT ISSUE'),
+        ),
+        SizedBox(
+          height: 14.h,
+        ),
+        Row(
+          children: [
+            SizedBox(
+              width: 55.w,
+            ),
+            customButton('USER ACTIVATION'),
+            SizedBox(
+              width: 14.w,
+            ),
+            customButton('PROFILE ISSUE'),
+          ],
+        ),
+        SizedBox(
+          height: 14.h,
+        ),
+        Row(
+          children: [
+            SizedBox(
+              width: 28.w,
+            ),
+            customButton('MERCHANTS'),
+            SizedBox(
+              width: 14.w,
+            ),
+            customButton('PAYMENTS ISSUE'),
+          ],
+        ),
+        SizedBox(
+          height: 14.h,
+        ),
+        Row(
+          children: [
+            SizedBox(
+              width: 94.w,
+            ),
+            customButton('BOOKING ISSUE'),
+            SizedBox(
+              width: 14.w,
+            ),
+            customButton('POINTS ISSUE'),
+          ],
+        ),
+        SizedBox(
+          height: 14.h,
         ),
         Padding(
-          padding: const EdgeInsets.fromLTRB(24, 16, 24, 10),
-          child: Text(
-            'Please choose one of the subjects below that is related to the issue…',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              fontFamily: 'Gotham',
-              fontWeight: FontWeight.bold,
-              color: Colors.black,
-              fontSize: 15,
-            ),
-          ),
+          padding:   EdgeInsets.only(left: 162.w),
+          child: customButton('RESERVATION ISSUE', width: 157.w),
         ),
-        Divider(
-          color: Theme.of(context).primaryColor,
-          thickness: 2,
-        ),
-        Expanded(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(left: 130.0, top: 60),
-                child: customButton('DISCOUNT ISSUE'),
-              ),
-              SizedBox(
-                height: 14,
-              ),
-              Row(
-                children: [
-                  SizedBox(
-                    width: 55,
-                  ),
-                  customButton('USER ACTIVATION'),
-                  SizedBox(
-                    width: 14,
-                  ),
-                  customButton('PROFILE ISSUE'),
-                ],
-              ),
-              SizedBox(
-                height: 14,
-              ),
-              Row(
-                children: [
-                  SizedBox(
-                    width: 28,
-                  ),
-                  customButton('MERCHANTS'),
-                  SizedBox(
-                    width: 14,
-                  ),
-                  customButton('PAYMENTS ISSUE'),
-                ],
-              ),
-              SizedBox(
-                height: 14,
-              ),
-              Row(
-                children: [
-                  SizedBox(
-                    width: 94,
-                  ),
-                  customButton('BOOKING ISSUE'),
-                  SizedBox(
-                    width: 14,
-                  ),
-                  customButton('POINTS ISSUE'),  
-                ],
-              ),
-              SizedBox(
-                height: 14,
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 162.0),
-                child: customButton('RESERVATION ISSUE', width: 170),
-              ),
-            ],
-          ),
-        ),
-        Divider(
-          height: 0,
-          color: Theme.of(context).primaryColor,
-          thickness: 2,
-        ),
-        Padding(
-          padding: const EdgeInsets.all(14.0),
-          child: Text(
-            'support@greencard-sa.com | 800 238 84 77',
-            style: TextStyle(
-              fontFamily: 'Gotham',
-              fontWeight: FontWeight.bold,
-              color: Theme.of(context).primaryColor,
-              fontSize: 15,
-            ),
-          ),
-        ),
-      ]),
+      ],
     );
   }
 }
@@ -146,7 +164,7 @@ class customButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: width ?? 146,
+      width: width ?? 146.w,
       child: ElevatedButton(
         onPressed: () {},
         style: ElevatedButton.styleFrom(
@@ -155,8 +173,10 @@ class customButton extends StatelessWidget {
                 borderRadius: BorderRadius.circular(18))),
         child: Text(
           title,
-          style: const TextStyle(
-              fontSize: 13, fontWeight: FontWeight.bold, fontFamily: 'Gotham'),
+          style: TextStyle(
+              fontSize: 13.sp,
+              fontWeight: FontWeight.bold,
+              fontFamily: 'Gotham'),
         ),
       ),
     );

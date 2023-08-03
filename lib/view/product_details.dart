@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:page_view_dot_indicator/page_view_dot_indicator.dart';
+
+import '../widgets/bottom_nav_bar.dart';
 
 class ProductDetailScreen extends StatefulWidget {
   @override
@@ -25,6 +28,8 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
 
     return Scaffold(
       backgroundColor: Colors.white,
+              bottomNavigationBar: BottomNavBarWidget(),
+
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -33,7 +38,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                 alignment: Alignment.bottomCenter,
                 children: [
                   Container(
-                    height: 344,
+                    height: 344.h,
                     width: double.infinity,
                     child: Expanded(
                       child: PageView(
@@ -51,7 +56,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                     ),
                   ),
                   Positioned(
-                    bottom: 45,
+                    bottom: 45.h,
                     child: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 24),
                       child: PageViewDotIndicator(
@@ -65,7 +70,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                     ),
                   ),
                   Container(
-                    height: 30,
+                    height: 30.h,
                     width: double.infinity,
                     margin: EdgeInsets.symmetric(horizontal: 20),
                     decoration: BoxDecoration(
@@ -78,14 +83,14 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                         child: Text('Soul Cafe',
                             style: TextStyle(
                               color: Colors.white,
-                              fontSize: 17,
+                              fontSize: 17.sp,
                               fontFamily: 'Gotham',
                               fontWeight: FontWeight.bold,
                             ))),
                   ),
                   Positioned(
-                      top: 56,
-                      right: 20,
+                      top: 56.h,
+                      right: 20.w,
                       child: Row(
                         children: [
                           InkWell(
@@ -93,7 +98,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                                 SvgPicture.asset('lib/assets/star_circle.svg'),
                           ),
                           SizedBox(
-                            width: 16,
+                            width: 16.w,
                           ),
                           InkWell(
                             child: SvgPicture.asset('lib/assets/upload.svg'),
@@ -101,8 +106,8 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                         ],
                       )),
                   Positioned(
-                    top: 56,
-                    left: 20,
+                    top: 56.h,
+                    left: 20.w,
                     child: InkWell(
                       child: SvgPicture.asset('lib/assets/back.svg'),
                     ),
@@ -110,7 +115,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                 ],
               ),
               Container(
-                height: 272,
+                height: 272.h,
                width: double.infinity,
                     margin: EdgeInsets.symmetric(horizontal: 20),
                    
@@ -130,20 +135,20 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                           ' 6:00am - 11:30pm',
                           style: TextStyle(
                             color: Color(0xFF165735),
-                            fontSize: 10,
+                            fontSize: 10.sp,
                             fontFamily: 'Gotham',
                             fontWeight: FontWeight.bold,
                           ),
                         ),
                         SizedBox(
-                          width: 20,
+                          width: 20.w,
                         ),
                         Icon(Icons.location_on),
                         Text(
                           ' Jeddah, Muhamadiyah',
                           style: TextStyle(
                             color: Color(0xFF165735),
-                            fontSize: 10,
+                            fontSize: 10.sp,
                             fontFamily: 'Gotham',
                             fontWeight: FontWeight.bold,
                           ),
@@ -167,7 +172,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                    
                     child: Image.asset('lib/assets/map.png')),
                   SizedBox(
-                    height: 17,
+                    height: 17.h,
                   ),
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 12),
@@ -175,8 +180,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Expanded(
-                          // width: 119,
-                          // height: 24,
+                          
                           child: ElevatedButton(
                             onPressed: () {},
                             style: ElevatedButton.styleFrom(
@@ -184,18 +188,16 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                                     borderRadius: BorderRadius.circular(14))),
                             child: Text(
                               'Discount',
-                              style: const TextStyle(
-                                  fontSize: 11,
+                              style:   TextStyle(
+                                  fontSize: 11.sp,
                                   //overflow: TextOverflow.ellipsis,
                                   fontWeight: FontWeight.bold,
                                   fontFamily: 'Gotham'),
                             ),
                           ),
                         ),
-                        SizedBox(width: 5,),
-                        Expanded(
-                          // width: 119,
-                          // height: 24,
+                        SizedBox(width: 5.w,),
+                        Expanded( 
                           child: ElevatedButton(
                             onPressed: () {},
                             style: ElevatedButton.styleFrom(
@@ -203,18 +205,16 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                                     borderRadius: BorderRadius.circular(14))),
                             child: Text(
                               'Branches',
-                              style: const TextStyle(
-                                  fontSize: 11,
+                              style:   TextStyle(
+                                  fontSize: 11.sp,
                                   //overflow: TextOverflow.ellipsis,
                                   fontWeight: FontWeight.bold,
                                   fontFamily: 'Gotham'),
                             ),
                           ),
-                        ),                        SizedBox(width: 5,),
+                        ),                        SizedBox(width: 5.w,),
 
-                        Expanded(
-                          // width: 119,
-                          // height: 24,
+                        Expanded( 
                           child: ElevatedButton(
                             onPressed: () {},
                             style: ElevatedButton.styleFrom(
@@ -222,8 +222,8 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                                     borderRadius: BorderRadius.circular(14))),
                             child: Text(
                               'Menu',
-                              style: const TextStyle(
-                                  fontSize: 11,
+                              style:   TextStyle(
+                                  fontSize: 11.sp,
                                   //overflow: TextOverflow.ellipsis,
                                   fontWeight: FontWeight.bold,
                                   fontFamily: 'Gotham'),
@@ -238,12 +238,12 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
               Padding(
                 padding: const EdgeInsets.fromLTRB(20, 16, 0, 16),
                 child: SizedBox(
-                  height: 208,
+                  height: 208.h,
                   child: ListView.separated(
                     scrollDirection: Axis.horizontal,
                     itemBuilder: (context, index) => customWidget(),
                     separatorBuilder: (context, index) => SizedBox(
-                      width: 9,
+                      width: 9.w,
                     ),
                     itemCount: 5,
                   ),

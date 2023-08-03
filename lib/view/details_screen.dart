@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../widgets/bottom_nav_bar.dart';
 import '../widgets/search_widget.dart';
 
 class DetailScreen extends StatelessWidget {
@@ -12,6 +14,8 @@ class DetailScreen extends StatelessWidget {
         backgroundColor: Colors.transparent,
         elevation: 0,
       ),
+              bottomNavigationBar: BottomNavBarWidget(),
+
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -32,20 +36,20 @@ class DetailScreen extends StatelessWidget {
                 style: TextStyle(
                   fontFamily: 'Junegull',
                   color: Colors.white,
-                  fontSize: 17,
+                  fontSize: 17.sp,
                 ),
               ),
             ),
             Container(
               width: double.infinity,
-              height: 40,
+              height: 40.h,
               color: Color(0xFFF5F4F4),
               padding: EdgeInsets.all(8),
               child: ListView.separated(
                 scrollDirection: Axis.horizontal,
                   itemBuilder: (context, index) => CustomWidget2(items[index]),
                   separatorBuilder: (context, index) => SizedBox(
-                        width: 5,
+                        width: 5.w,
                       ),
                   itemCount: items.length),
             ),
@@ -153,7 +157,7 @@ class CustomWidget2 extends StatelessWidget {
           style: TextStyle(
             color: Colors.white,
             fontFamily: 'Junegull',
-            fontSize: 16,
+            fontSize: 16.sp,
           ),
         ),
       ),
@@ -173,7 +177,7 @@ class CustomWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 72,
+      height: 72.h,
       child: Row(
         children: [
           Container(
@@ -181,13 +185,13 @@ class CustomWidget extends StatelessWidget {
             decoration: BoxDecoration(borderRadius: BorderRadius.circular(8)),
             child: Image.asset(
               image,
-              width: 147,
-              height: 72,
+              width: 147.w,
+              height: 72.h,
               fit: BoxFit.cover,
             ),
           ),
-          const SizedBox(
-            width: 8,
+            SizedBox(
+            width: 8.w,
           ),
           Expanded(
             child: Column(
@@ -196,25 +200,25 @@ class CustomWidget extends StatelessWidget {
                 Text(
                   title,
                   style: TextStyle(
-                      fontSize: 11,
+                      fontSize: 11.sp,
                       fontWeight: FontWeight.bold,
                       fontFamily: 'Gotham',
                       color: Colors.black),
                 ),
-                SizedBox(height: 4),
+                SizedBox(height: 4.h),
                 Text(
                   'Jeddah, Mall of Arabia',
                   style: TextStyle(
-                      fontSize: 9,
+                      fontSize: 9.sp,
                       fontWeight: FontWeight.bold,
                       fontFamily: 'GothamBook',
                       color: Theme.of(context).primaryColor),
                 ),
-                SizedBox(height: 2),
+                SizedBox(height: 2.h),
                 Text(
                   'Coffee and sweets in pottery',
                   style: TextStyle(
-                      fontSize: 9,
+                      fontSize: 9.sp,
                       fontWeight: FontWeight.bold,
                       fontFamily: 'GothamBook',
                       color: Color(0xFF165735)),
@@ -224,13 +228,13 @@ class CustomWidget extends StatelessWidget {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(14),
                       color: Theme.of(context).primaryColor),
-                  width: 82,
-                  height: 18,
+                  width: 82.w,
+                  height: 18.h,
                   child: Center(
                     child: Text(
                       '15% Discount',
                       style: TextStyle(
-                          fontSize: 9,
+                          fontSize: 9.sp,
                           fontWeight: FontWeight.bold,
                           color: Colors.white,
                           fontFamily: 'Gotham'),
@@ -251,8 +255,8 @@ class CustomWidget extends StatelessWidget {
                     BoxDecoration(borderRadius: BorderRadius.circular(8)),
                 child: Image.asset(
                   image,
-                  width: 35,
-                  height: 32,
+                  width: 35.w,
+                  height: 32.h,
                   fit: BoxFit.cover,
                 ),
               ),

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../widgets/bottom_nav_bar.dart';
 import '../widgets/search_widget.dart';
 
 class RateScreen extends StatelessWidget {
@@ -14,6 +15,8 @@ class RateScreen extends StatelessWidget {
           backgroundColor: Colors.transparent,
           elevation: 0,
         ),
+                bottomNavigationBar: BottomNavBarWidget(),
+
         body: SingleChildScrollView(
             child: Column(children: [
            Divider(
